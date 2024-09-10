@@ -2,6 +2,7 @@ import { CiSearch } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
 import Sidebar from "./Sidebar";
 import { useState } from "react";
+import ThemeButton from "./ThemeButton";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -24,6 +25,9 @@ const Navbar: React.FC = () => {
             placeholder="Type to search..."
             className=" outline-none ml-2"
           />
+        </div>
+        <div>
+          <ThemeButton />
         </div>
         <div className="flex items-center">
           <h1 className="text-xl font-bold">Dashboard</h1>
