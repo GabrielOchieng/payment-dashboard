@@ -17,8 +17,8 @@ const TransactionsList: React.FC = () => {
       setLoading(true);
       try {
         await new Promise((resolve) => setTimeout(resolve, 2000)); // Delay of 2 seconds
-        // const response = await fetch("/data/transactions.json");
-        const response = await fetch("http://localhost:3000/transfers");
+        const response = await fetch("/data/transactions.json");
+        // const response = await fetch("http://localhost:3000/transactions");
         const data = await response.json();
         setTransactions(data.transactions);
         setFilteredTransactions(data.transactions);
@@ -34,7 +34,7 @@ const TransactionsList: React.FC = () => {
 
   useEffect(() => {
     // Filter transactions based on status and search ID
-    const filtered = transactions.filter((transaction) => {
+    const filtered = transactions?.filter((transaction) => {
       const matchesStatus =
         statusFilter === "All" || transaction.status === statusFilter;
       const matchesSearch =
@@ -81,7 +81,7 @@ const TransactionsList: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredTransactions.length > 0 ? (
+          {filteredTransactions?.length > 0 ? (
             filteredTransactions.map((transaction) => (
               <tr key={transaction.id}>
                 <td className="border border-gray-300 p-2 text-center">
