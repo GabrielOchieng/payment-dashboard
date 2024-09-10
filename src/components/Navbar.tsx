@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import { useState } from "react";
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const handleSideBar = () => setIsOpen(!isOpen);
 
   return (

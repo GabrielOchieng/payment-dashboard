@@ -5,7 +5,8 @@ import { FaWpforms } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { IoStatsChartSharp } from "react-icons/io5";
 import { GiNetworkBars } from "react-icons/gi";
-import { FcAbout } from "react-icons/fc";
+import { MdContactPhone } from "react-icons/md";
+import { CiMemoPad } from "react-icons/ci";
 
 interface SidebarProps {
   handleSideBar: () => void;
@@ -57,11 +58,11 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSideBar, isOpen }) => {
             <a href="#">Bars</a>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
-            <FcAbout className="w-6 h-6" />
+            <CiMemoPad className="w-6 h-6" />
             <a href="#">About</a>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
-            <FaTimes className="w-6 h-6" />
+            <MdContactPhone className="w-6 h-6" />
 
             <a href="#">Contact</a>
           </li>
