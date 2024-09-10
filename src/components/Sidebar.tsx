@@ -7,6 +7,7 @@ import { IoStatsChartSharp } from "react-icons/io5";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdContactPhone } from "react-icons/md";
 import { CiMemoPad } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   handleSideBar: () => void;
@@ -21,9 +22,9 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSideBar, isOpen }) => {
       }`}
     >
       <div className="flex items-center justify-between h-16 px-6">
-        <a href="/">
+        <Link to="/">
           <h1 className="text-xl font-bold">DASHBOARD</h1>
-        </a>
+        </Link>
         <button onClick={handleSideBar} className="focus:outline-none">
           <FaTimes className="h-6 w-6" />
         </button>
@@ -34,37 +35,37 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSideBar, isOpen }) => {
         <ul className="flex flex-col flex-grow gap-3 text-2xl">
           <li className="hover:underline flex-grow flex items-center gap-4">
             <IoHomeOutline className="w-6 h-6" />
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <LiaTableSolid className="w-6 h-6" />
-            <a href="#">Tables</a>
+            <Link to="#">Tables</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <FaWpforms className="w-6 h-6" />
-            <a href="#">Form</a>
+            <Link to="/transfer">Form</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <CgProfile className="w-6 h-6" />
 
-            <a href="#">Profile</a>
+            <Link to="#">Profile</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <IoStatsChartSharp className="w-6 h-6" />
-            <a href="#">Charts</a>
+            <Link to="#">Charts</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <GiNetworkBars className="w-6 h-6" />
-            <a href="#">Bars</a>
+            <Link to="#">Bars</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <CiMemoPad className="w-6 h-6" />
-            <a href="#">About</a>
+            <Link to="#">About</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <MdContactPhone className="w-6 h-6" />
 
-            <a href="#">Contact</a>
+            <Link to="#">Contact</Link>
           </li>
         </ul>
       </div>
