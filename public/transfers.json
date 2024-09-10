@@ -41,13 +41,6 @@
       "amount": "0789",
       "transferType": "Mobile",
       "description": "Salary"
-    },
-    {
-      "id": "fdb2",
-      "recipient": "ANother",
-      "amount": "586",
-      "transferType": "Stripe",
-      "description": "Salary"
     }
   ]
 }
