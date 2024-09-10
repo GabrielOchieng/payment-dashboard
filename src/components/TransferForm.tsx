@@ -27,7 +27,9 @@ const TransferForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/transactions", {
+      // const response = await fetch("/data/transfers.json", {
+
+      const response = await fetch("http://localhost:3000/transfers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,6 +44,7 @@ const TransferForm: React.FC = () => {
       const result = await response.json();
       console.log(result);
       toast.success("Transfer initiated successfully!");
+      setTransferData(defaultTransferData); // Reset form fields after successful submission
     } catch (error) {
       toast.error("There was an error submitting the transfer.");
       console.error("Error:", error);
@@ -103,11 +106,9 @@ const TransferForm: React.FC = () => {
           required
         >
           <option value="Bank">Bank</option>
-          <option value="National">National</option>
-          <option value="KCB">KCB</option>
-          <option value="Equity">Equity</option>
-          <option value="Cooperative">Cooperative</option>
-          <option value="Family">Family</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Stripe">Stripe</option>
+          <option value="Paypall">Paypall</option>
         </select>
       </div>
       <div className="mb-4">

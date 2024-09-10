@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <LiaTableSolid className="w-6 h-6" />
-            <Link to="#">Tables</Link>
+            <Link to="/table">Table</Link>
           </li>
           <li className="hover:underline flex-grow flex items-center gap-4">
             <FaWpforms className="w-6 h-6" />

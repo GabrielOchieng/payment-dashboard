@@ -9,14 +9,14 @@
     },
     {
       "id": 2,
-      "amount": 245,
+      "amount": 245.0,
       "type": "Collection",
       "date": "2024-09-05T08:45:00Z",
       "status": "Pending"
     },
     {
       "id": 3,
-      "amount": 100,
+      "amount": 100.0,
       "type": "Transfer",
       "date": "2024-09-07T12:30:00Z",
       "status": "Failed"
@@ -29,18 +29,18 @@
       "status": "Completed"
     },
     {
-      "id": "d396",
-      "recipient": "Gabriel",
-      "amount": "0450",
-      "transferType": "Cooperative",
-      "description": "Salary"
+      "id": 5,
+      "amount": 50.0,
+      "type": "Transfer",
+      "date": "2024-09-12T09:00:00Z",
+      "status": "Pending"
     },
     {
-      "id": "a56a",
-      "recipient": "Gabriel",
-      "amount": "0450",
-      "transferType": "Cooperative",
-      "description": "Salary"
+      "id": 6,
+      "amount": 75.25,
+      "type": "Collection",
+      "date": "2024-09-15T10:00:00Z",
+      "status": "Completed"
     }
   ]
 }

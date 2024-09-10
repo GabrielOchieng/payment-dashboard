@@ -1,0 +1,39 @@
+{
+  "transfers": [
+    {
+      "id": "d396",
+      "recipient": "Gabriel",
+      "amount": "0450",
+      "transferType": "Cooperative",
+      "description": "Salary"
+    },
+    {
+      "id": "a56a",
+      "recipient": "Gabriel",
+      "amount": "0450",
+      "transferType": "Cooperative",
+      "description": "Salary"
+    },
+    {
+      "id": "3b71",
+      "recipient": "Gabriel",
+      "amount": "3",
+      "transferType": "KCB",
+      "description": "Salary"
+    },
+    {
+      "id": "61e9",
+      "recipient": "hg",
+      "amount": "05558",
+      "transferType": "Mobile",
+      "description": "Salary"
+    },
+    {
+      "id": "df31",
+      "recipient": "Herrera",
+      "amount": "045",
+      "transferType": "Stripe",
+      "description": "Salary"
+    }
+  ]
+}
