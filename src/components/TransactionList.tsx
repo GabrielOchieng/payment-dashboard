@@ -17,7 +17,8 @@ const TransactionsList: React.FC = () => {
       setLoading(true);
       try {
         await new Promise((resolve) => setTimeout(resolve, 2000)); // Delay of 2 seconds
-        const response = await fetch("/data/transactions.json");
+        // const response = await fetch("/data/transactions.json");
+        const response = await fetch("http://localhost:3000/transfers");
         const data = await response.json();
         setTransactions(data.transactions);
         setFilteredTransactions(data.transactions);
