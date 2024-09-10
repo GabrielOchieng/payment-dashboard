@@ -20,17 +20,20 @@ const TransferForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Validate and submit the transfer data
+    // Validation before submission the transfer data
     if (transferData.amount <= 0 || !transferData.recipient) {
       toast.error("Please provide valid recipient and amount.");
       return;
     }
-    // Simulate form submission
+    // Confirm form submission
     toast.success("Transfer initiated successfully!");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4">
+    <form
+      onSubmit={handleSubmit}
+      className="p-4 w-[90%] md:w-[60%] mx-auto container border mt-6 rounded shadow-lg"
+    >
       <div className="mb-4">
         <label
           htmlFor="recipient"
@@ -81,8 +84,11 @@ const TransferForm: React.FC = () => {
           required
         >
           <option value="Bank">Bank</option>
-          <option value="Mobile">Mobile</option>
-          <option value="PayPal">PayPal</option>
+          <option value="National">National</option>
+          <option value="KCB">KCB</option>
+          <option value="Equity">Equity</option>
+          <option value="Cooperative">Cooperative</option>
+          <option value="Family">Family</option>
         </select>
       </div>
       <div className="mb-4">
