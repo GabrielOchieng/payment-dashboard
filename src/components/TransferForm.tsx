@@ -1,8 +1,7 @@
-// TransferForm.tsx
 import React, { useState } from "react";
-import { defaultTransferData } from "../utils/dummyData";
-import { toast } from "react-hot-toast";
 import { TransferData } from "../types";
+import { defaultTransferData } from "../utils/dummyData";
+import { toast } from "react-toastify";
 
 const TransferForm: React.FC = () => {
   const [transferData, setTransferData] =
@@ -18,15 +17,35 @@ const TransferForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Validation before submission the transfer data
+
+    // Validation before submission
     if (transferData.amount <= 0 || !transferData.recipient) {
-      toast.error("Please provide valid recipient and amount.");
+      toast.error("Please provide a valid recipient and amount.");
       return;
     }
-    // Confirm form submission
-    toast.success("Transfer initiated successfully!");
+
+    try {
+      const response = await fetch("http://localhost:3000/transactions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(transferData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+
+      const result = await response.json();
+      console.log(result);
+      toast.success("Transfer initiated successfully!");
+    } catch (error) {
+      toast.error("There was an error submitting the transfer.");
+      console.error("Error:", error);
+    }
   };
 
   return (

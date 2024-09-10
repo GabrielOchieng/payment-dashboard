@@ -1,0 +1,46 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "amount": 150.75,
+      "type": "Transfer",
+      "date": "2024-09-01T14:23:00Z",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "amount": 245,
+      "type": "Collection",
+      "date": "2024-09-05T08:45:00Z",
+      "status": "Pending"
+    },
+    {
+      "id": 3,
+      "amount": 100,
+      "type": "Transfer",
+      "date": "2024-09-07T12:30:00Z",
+      "status": "Failed"
+    },
+    {
+      "id": 4,
+      "amount": 320.5,
+      "type": "Refund",
+      "date": "2024-09-10T15:00:00Z",
+      "status": "Completed"
+    },
+    {
+      "id": "d396",
+      "recipient": "Gabriel",
+      "amount": "0450",
+      "transferType": "Cooperative",
+      "description": "Salary"
+    },
+    {
+      "id": "a56a",
+      "recipient": "Gabriel",
+      "amount": "0450",
+      "transferType": "Cooperative",
+      "description": "Salary"
+    }
+  ]
+}
