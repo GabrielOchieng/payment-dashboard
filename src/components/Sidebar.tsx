@@ -17,7 +17,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, handleSideBar }) => {
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-72 z-50 bg-black bg-opacity-85 text-white transition duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 h-full w-72 z-50 bg-black dark:bg-green-400 bg-opacity-85 text-white transition duration-300 ease-in-out ${
         isOpen ? "open" : ""
       }`}
     >
