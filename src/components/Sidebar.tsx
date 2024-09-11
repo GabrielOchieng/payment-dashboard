@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, handleSideBar }) => {
         </Link>
         <button
           onClick={handleSideBar}
-          className="focus:outline-none sm:hidden"
+          className="focus:outline-none md:hidden"
         >
           <FaTimes className="h-6 w-6" />
         </button>
