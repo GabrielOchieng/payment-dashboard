@@ -26,7 +26,7 @@ function App() {
       <div>
         <Navbar />
         <ToastContainer />
-        <div className=" ml-72">
+        <div className="ml-2 sm:ml-72">
           <main>
             <Outlet />
           </main>

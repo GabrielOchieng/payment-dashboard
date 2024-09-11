@@ -1,4 +1,4 @@
-// import { FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { LiaTableSolid } from "react-icons/lia";
 import { FaWpforms } from "react-icons/fa";
@@ -14,7 +14,7 @@ interface SidebarProps {
   isOpen: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, handleSideBar }) => {
   return (
     <div
       className={`fixed top-0 left-0 h-full w-72 z-50 bg-black bg-opacity-85 text-white transition duration-300 ease-in-out ${
@@ -25,9 +25,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
         <Link to="/">
           <h1 className="text-xl font-bold">DASHBOARD</h1>
         </Link>
-        {/* <button onClick={handleSideBar} className="focus:outline-none">
+        <button
+          onClick={handleSideBar}
+          className="focus:outline-none sm:hidden"
+        >
           <FaTimes className="h-6 w-6" />
-        </button> */}
+        </button>
       </div>
 
       <div className="sidebar-content h-[calc(100%-4rem)] p-6 flex flex-col">
