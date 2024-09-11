@@ -62,7 +62,7 @@ const TransactionsList: React.FC = () => {
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded text-black"
         >
           <option value="All">All</option>
           <option value="Completed">Completed</option>
@@ -70,65 +70,67 @@ const TransactionsList: React.FC = () => {
           <option value="Failed">Failed</option>
         </select>
       </div>
-      <table className="min-w-full border-collapse border border-gray-200">
-        <thead>
-          <tr>
-            <th className="border border-gray-300 p-2">Transaction ID</th>
-            <th className="border border-gray-300 p-2">Amount</th>
-            <th className="border border-gray-300 p-2">Type</th>
-            <th className="border border-gray-300 p-2">Date</th>
-            <th className="border border-gray-300 p-2">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredTransactions?.length > 0 ? (
-            filteredTransactions.map((transaction) => (
-              <tr key={transaction.id}>
-                <td className="border border-gray-300 p-2 text-center">
-                  {transaction.id}
-                </td>
-                <td className="border border-gray-300 p-2 text-center">
-                  {transaction.amount.toFixed(2)}
-                </td>
+      <div className="overflow-x-scroll sm:overflow-x-hidden">
+        <table className="min-w-full border-collapse border border-gray-200 ">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 p-2">Transaction ID</th>
+              <th className="border border-gray-300 p-2">Amount</th>
+              <th className="border border-gray-300 p-2">Type</th>
+              <th className="border border-gray-300 p-2">Date</th>
+              <th className="border border-gray-300 p-2">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredTransactions?.length > 0 ? (
+              filteredTransactions.map((transaction) => (
+                <tr key={transaction.id}>
+                  <td className="border border-gray-300 p-2 text-center">
+                    {transaction.id}
+                  </td>
+                  <td className="border border-gray-300 p-2 text-center">
+                    {transaction.amount.toFixed(2)}
+                  </td>
+                  <td
+                    className={`border border-gray-300 p-2 text-center ${
+                      transaction.type === "Transfer"
+                        ? "text-orange-500"
+                        : transaction.type === "Collection"
+                        ? "text-teal-500"
+                        : "text-indigo-500"
+                    }`}
+                  >
+                    {transaction.type}
+                  </td>
+                  <td className="border border-gray-300 p-2 text-center">
+                    {new Date(transaction.date).toLocaleDateString()}
+                  </td>
+                  <td
+                    className={`border border-gray-300 p-2 text-center ${
+                      transaction.status === "Completed"
+                        ? "text-green-500"
+                        : transaction.status === "Pending"
+                        ? "text-blue-500"
+                        : "text-red-500"
+                    }`}
+                  >
+                    {transaction.status}
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
                 <td
-                  className={`border border-gray-300 p-2 text-center ${
-                    transaction.type === "Transfer"
-                      ? "text-orange-500"
-                      : transaction.type === "Collection"
-                      ? "text-teal-500"
-                      : "text-indigo-500"
-                  }`}
+                  colSpan={5}
+                  className="border border-gray-300 p-2 text-center"
                 >
-                  {transaction.type}
-                </td>
-                <td className="border border-gray-300 p-2 text-center">
-                  {new Date(transaction.date).toLocaleDateString()}
-                </td>
-                <td
-                  className={`border border-gray-300 p-2 text-center ${
-                    transaction.status === "Completed"
-                      ? "text-green-500"
-                      : transaction.status === "Pending"
-                      ? "text-blue-500"
-                      : "text-red-500"
-                  }`}
-                >
-                  {transaction.status}
+                  No transactions found
                 </td>
               </tr>
-            ))
-          ) : (
-            <tr>
-              <td
-                colSpan={5}
-                className="border border-gray-300 p-2 text-center"
-              >
-                No transactions found
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
