@@ -131,7 +131,7 @@ const TransferForm: React.FC = () => {
       </div>
       <button
         type="submit"
-        className="inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600"
+        className="inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600"
       >
         Submit
       </button>
