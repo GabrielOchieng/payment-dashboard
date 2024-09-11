@@ -28,14 +28,16 @@ const TransferForm: React.FC = () => {
 
     try {
       // const response = await fetch("/transfers.json", {
-      const response = await fetch("/transactions.json", {
-        // const response = await fetch("http://localhost:3000/transfers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(transferData),
-      });
+      const response = await fetch(
+        "https://my-json-server.typicode.com/GabrielOchieng/payment-dashboard/transfers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(transferData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok.");
