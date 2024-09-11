@@ -12,7 +12,7 @@ const SummaryCard: React.FC<SummaryCardProps> = ({
   description,
 }) => {
   return (
-    <div className="bg-white p-4 rounded shadow">
+    <div className="bg-white text-black p-4 rounded shadow">
       <div className="flex justify-between mb-2">
         <p className="text-lg font-semibold">{title}</p>
       </div>
