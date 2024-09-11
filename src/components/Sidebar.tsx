@@ -48,24 +48,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, handleSideBar }) => {
             <FaWpforms className="w-6 h-6" />
             <Link to="/transfer">Form</Link>
           </li>
-          <li className="hover:underline flex-grow flex items-center gap-4">
+          <li className=" flex-grow flex items-center gap-4">
             <CgProfile className="w-6 h-6" />
 
             <Link to="#">Profile</Link>
           </li>
-          <li className="hover:underline flex-grow flex items-center gap-4">
+          <li className=" flex-grow flex items-center gap-4">
             <IoStatsChartSharp className="w-6 h-6" />
             <Link to="#">Charts</Link>
           </li>
-          <li className="hover:underline flex-grow flex items-center gap-4">
+          <li className=" flex-grow flex items-center gap-4">
             <GiNetworkBars className="w-6 h-6" />
             <Link to="#">Bars</Link>
           </li>
-          <li className="hover:underline flex-grow flex items-center gap-4">
+          <li className=" flex-grow flex items-center gap-4">
             <CiMemoPad className="w-6 h-6" />
             <Link to="#">About</Link>
           </li>
-          <li className="hover:underline flex-grow flex items-center gap-4">
+          <li className=" flex-grow flex items-center gap-4">
             <MdContactPhone className="w-6 h-6" />
 
             <Link to="#">Contact</Link>
