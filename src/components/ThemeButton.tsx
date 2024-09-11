@@ -28,7 +28,7 @@
 
 // export default ThemeButton;
 
-import { CiSun } from "react-icons/ci";
+import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import useTheme from "../contexts/theme";
 
@@ -47,8 +47,9 @@ const ThemeButton = () => {
     <div
       onClick={toggleTheme}
       style={{ cursor: "pointer", fontSize: "24px", padding: "10px" }}
+      className="icon-container"
     >
-      {themeMode === "dark" ? <CiSun /> : <FaMoon />}
+      {themeMode === "dark" ? <CiLight /> : <FaMoon />}
     </div>
   );
 };
