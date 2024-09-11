@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div>
           <IoIosMenu
-            className="h-6 w-6 text-gray-900 hover:text-gray-600"
+            className="h-6 w-6 font-bold hover:text-gray-600"
             onClick={handleSideBar}
           />
         </div>
