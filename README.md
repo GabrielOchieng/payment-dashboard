@@ -20,13 +20,17 @@ React Icons- (https://react-icons.github.io/react-icons/): For incorporating var
 
 Tailwind CSS- (https://tailwindcss.com/docs/installation): For rapid and responsive web UI development.
 
+JSON-SERVER- The project stores data locally in JSON files where you can post and fetch the required data.
+
 ### Development Setup:
 
 Clone the repository: Clone this repository to your local machine using git clone https://github.com/GabrielOchieng/payment-dashboard.git.
 
 Install dependencies: Run npm install in the project directory to install all required dependencies.
 
-Development Server: Run npm run dev to start the development server. This will launch the application in your browser for live updates as you make code changes.
+Development Server: Run npm run dev to start the development environment. This will launch the application in your browser for live updates as you make code changes.
+
+JSON Server: Run json-server --watch transfers.json to access the JSON server on your local repository.
 
 Build for Production: Run npm run build to create an optimized production build of the frontend code.
 
