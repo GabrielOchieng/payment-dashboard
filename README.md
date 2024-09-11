@@ -1,4 +1,4 @@
-# Payment Dashboard
+<!-- # Payment Dashboard
 
 ## Project Overview
 
@@ -34,4 +34,52 @@ JSON Server: Run json-server --watch transfers.json to access the JSON server on
 
 Build for Production: Run npm run build to create an optimized production build of the frontend code.
 
-Linting: Run npm run lint to check your code for potential errors and style inconsistencies.
+Linting: Run npm run lint to check your code for potential errors and style inconsistencies. -->
+
+# Payment Dashboard
+
+## Project Overview
+
+This project implements a simple payment dashboard using React and TypeScript. It demonstrates key features of a hypothetical payment platform, including transactions, collections, and transfers.
+
+### Key Features
+
+- **React** ([reactjs.org](https://legacy.reactjs.org/)): Used for building dynamic and interactive UI components.
+- **TypeScript** ([typescriptlang.org](https://www.typescriptlang.org/)): Enhances code quality and maintainability with static typing, interfaces, and advanced tooling.
+- **React Router** ([react-router.com](https://reacttraining.com/react-router)): Manages navigation between different views and handles route protection.
+- **React Toastify** ([react-toastify.com](https://fkhadra.github.io/react-toastify/introduction/)): Provides user notifications.
+- **React Icons** ([react-icons.github.io](https://react-icons.github.io/react-icons/)): Integrates various icons into the UI.
+- **Tailwind CSS** ([tailwindcss.com](https://tailwindcss.com/docs/installation)): Facilitates rapid and responsive web UI development.
+- **JSON Server**: Stores and serves data locally using JSON files. Enables simple data operations like POST and FETCH.
+
+### Development Setup
+
+Follow these steps to get the project up and running on your local machine:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/GabrielOchieng/payment-dashboard.git
+   cd payment-dashboard
+   Install Dependencies:
+   ```
+
+npm install
+
+Start the Development Server:
+
+npm run dev
+This command launches the application and opens it in your browser, enabling live updates as you modify the code.
+
+Run JSON Server:
+
+json-server --watch transfers.json
+This starts the JSON server to handle local data fetching and posting. Ensure transfers.json is present in the root directory of your project.
+
+Build for Production:
+
+npm run build
+Generates an optimized production build of the frontend code.
+
+Lint the Code:
+
+npm run lint
