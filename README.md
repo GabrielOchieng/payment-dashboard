@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
+# Payment Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project involves designing and implementing a simple payment dashboard using React and TypeScript. The dashboard will showcase features of a hypothetical payment platform, including transactions, collections, and transfers. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Focus Areas
 
-## Expanding the ESLint configuration
+1. **TypeScript Fluency**: Demonstrate understanding of typing, interfaces, generics, and utility types in TypeScript.
+2. **React Knowledge**: Showcase component design, state management, hooks, and lifecycle methods.
+3. **Design Skills**: Exhibit UI/UX understanding, component reusability, and clean CSS organization (Tailwind CSS is a plus).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Task Details
 
-- Configure the top-level `parserOptions` property like this:
+### 1. Dashboard Overview Component
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Layout**: Create a dashboard with a header, sidebar, and main content area.
+- **Summary Cards**: Display metrics like:
+  - Total Transactions
+  - Total Transfers
+  - Total Collections
+  - Pending Payouts
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Requirements**:
+- Use React hooks (e.g., `useState`, `useEffect`) for data management.
+- Simulate API calls for fetching data (e.g., using `setTimeout`).
+- Apply TypeScript typings for fetched data.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 2. Transactions List Component
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Table**: List transactions with fields:
+  - Transaction ID
+  - Amount
+  - Type (Transfer, Collection, etc.)
+  - Date
+  - Status (Completed, Pending, Failed)
+
+**Requirements**:
+- Filter transactions by status.
+- Implement a search bar for Transaction ID.
+- Show a loading spinner or skeleton loader while data is loading.
+- Use TypeScript interfaces for transaction data.
+
+### 3. Transfer Funds Form Component
+
+- **Form**: Design a form for initiating transfers with fields:
+  - Recipient
+  - Amount
+  - Transfer Type (Bank, Mobile, etc.)
+  - Description
+
+**Requirements**:
+- Manage form inputs using React state.
+- Validate inputs (e.g., amount should be numeric, recipient should not be empty).
+- Display confirmation messages or errors using toast notifications (e.g., `react-hot-toast`).
+- Strong TypeScript typing for form data.
+
+### 4. Design & UI/UX Skills
+
+- Use Tailwind CSS or another CSS framework for styling.
+- Ensure the dashboard is responsive.
+- Create a clean, intuitive, and user-friendly UI.
+
+**Bonus Points**:
+- Implement a dark mode toggle.
+- Include meaningful icons next to summary cards and transaction types.
+
+### 5. Code Quality and Documentation
+
+- Write clean, maintainable code with proper comments.
+- Structure the app modularly with logically broken-down components.
+- Provide documentation on how to set up and run the project, including the structure and any significant design decisions.
+
+## Task Submission
+
+- Submit your project via a GitHub repository.
+- Ensure that the project is easily set up and run locally with clear README instructions.
+
+## Evaluation Criteria
+
+1. **TypeScript**:
+   - Proper use of interfaces, types, generics, and typing in React components.
+
+2. **React**:
+   - Effective use of functional components, hooks, and state management.
+
+3. **Design Skills**:
+   - Clean, simple, and responsive UI.
+   - Effective use of CSS or Tailwind CSS.
+
+4. **Problem Solving**:
+   - Logical and maintainable app structure.
+   - Handling of asynchronous data fetching and error states.
+
+5. **Bonus Points**:
+   - Extra features like dark mode, good use of icons, or optimizations.
+
+## Getting Started
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/payment-dashboard.git
+   cd payment-dashboard
