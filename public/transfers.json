@@ -41,6 +41,13 @@
       "amount": "0789",
       "transferType": "Mobile",
       "description": "Salary"
+    },
+    {
+      "id": "ba00",
+      "recipient": "steve",
+      "amount": "400",
+      "transferType": "Mobile",
+      "description": "School fee"
     }
   ]
 }

@@ -51,7 +51,7 @@ const TransactionsList: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4 flex items-center space-x-4">
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
           type="text"
           placeholder="Search by Transaction ID"
