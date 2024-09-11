@@ -28,7 +28,8 @@ const TransferForm: React.FC = () => {
 
     try {
       // const response = await fetch("/transfers.json", {
-      const response = await fetch("http://localhost:3000/transfers", {
+      const response = await fetch("/transactions.json", {
+        // const response = await fetch("http://localhost:3000/transfers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
