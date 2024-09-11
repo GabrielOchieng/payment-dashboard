@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
   const handleSideBar = () => setIsOpen(!isOpen);
 
   return (
-    <nav className=" shadow-lg">
+    <nav className=" shadow-lg dark:bg-gray-900">
       {isOpen && <Sidebar isOpen={isOpen} handleSideBar={handleSideBar} />}
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center ">
         <div>
           <IoIosMenu
             className="h-6 w-6 font-bold hover:text-gray-600"
