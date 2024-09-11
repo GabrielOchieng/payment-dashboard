@@ -2,32 +2,53 @@ import { Transaction, TransferData } from "../types";
 
 export const transactions: Transaction[] = [
   {
-    id: "TX1234567890",
-    amount: 150.75,
+    id: "1",
+    amount: 1300.75,
     type: "Transfer",
     date: "2024-09-01T14:23:00Z",
     status: "Completed",
   },
   {
-    id: "TX1234567891",
+    id: "2",
     amount: 245.0,
     type: "Collection",
     date: "2024-09-05T08:45:00Z",
     status: "Pending",
   },
   {
-    id: "TX1234567892",
+    id: "3",
     amount: 100.0,
     type: "Transfer",
     date: "2024-09-07T12:30:00Z",
     status: "Failed",
   },
   {
-    id: "TX1234567893",
+    id: "4",
     amount: 320.5,
     type: "Refund",
     date: "2024-09-10T15:00:00Z",
     status: "Completed",
+  },
+  {
+    id: "5",
+    amount: 320.5,
+    type: "Refund",
+    date: "2024-09-10T15:00:00Z",
+    status: "Completed",
+  },
+  {
+    id: "6",
+    amount: 170,
+    type: "Transfer",
+    date: "2024-09-01T14:23:00Z",
+    status: "Completed",
+  },
+  {
+    id: "2",
+    amount: 245.0,
+    type: "Collection",
+    date: "2024-09-05T08:45:00Z",
+    status: "Pending",
   },
 ];
 

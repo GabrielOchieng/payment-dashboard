@@ -3,7 +3,7 @@ import SummaryCard from "./SummaryCard";
 import { calculateSummary, transactions } from "../utils/dummyData";
 import SkeletonSummaryCard from "./SkeletonSummaryCard";
 
-// Define DashboardSummary type
+// Definition of DashboardSummary type
 type DashboardSummary = {
   totalTransactions: number;
   totalTransfers: number;
@@ -44,7 +44,12 @@ const DashboardOverview: React.FC = () => {
 
   return (
     <div className="p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div>
+        <h1 className="text-center font-bold text-3xl mb-5 ">
+          Summary Dashboard
+        </h1>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <SummaryCard
           title="Total Transactions"
           value={summary.totalTransactions}

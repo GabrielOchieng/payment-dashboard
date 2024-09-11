@@ -1,29 +1,21 @@
-// Define the props interface
+// Defination of the props interface
 interface SummaryCardProps {
   title: string;
   value: number;
-  description?: string;
 }
 
 // The SummaryCard component
-const SummaryCard: React.FC<SummaryCardProps> = ({
-  title,
-  value,
-  description,
-}) => {
+const SummaryCard: React.FC<SummaryCardProps> = ({ title, value }) => {
   return (
-    <div className="bg-white text-black p-4 rounded shadow">
+    <div className="bg-white text-black p-4 rounded shadow hover:scale-105">
       <div className="flex justify-between mb-2">
-        <p className="text-lg font-semibold">{title}</p>
+        <p className="text-lg font-semibold text-green-400">{title}</p>
       </div>
       <div className="flex justify-between mb-2">
-        <p className="text-2xl font-bold">Ksh. {value}</p>
+        <p className="text-2xl font-bold border border-gray-400 rounded-full py-1 px-2">
+          Ksh. {value}
+        </p>
       </div>
-      {description && (
-        <div className="flex justify-between">
-          <p className="text-gray-500">{description}</p>
-        </div>
-      )}
     </div>
   );
 };
