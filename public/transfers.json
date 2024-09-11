@@ -48,6 +48,13 @@
       "amount": "400",
       "transferType": "Mobile",
       "description": "School fee"
+    },
+    {
+      "id": "1fbb",
+      "recipient": "Herrera",
+      "amount": "599",
+      "transferType": "Stripe",
+      "description": "Salary"
     }
   ]
 }
